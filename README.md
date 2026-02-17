@@ -1,11 +1,15 @@
 # Random Conversation App
 
-Prosty program w Pythonie generujący losową wiadomość i prowadzący interaktywną rozmowę z użytkownikiem.
+Prosty program w Pythonie generujacy losowa wiadomosc i prowadzacy interaktywna rozmowe z uzytkownikiem.
 
 ## Funkcje:
-- Losowy komunikat zależny od płci (heurystycznie po imieniu)
-- Reakcja na słowa wdzięczności
+- Losowy komunikat zalezny od plci (heurystycznie po imieniu)
+- Reakcja na slowa wdziecznosci
 - Prosta logika konwersacji
 
+## Struktura:
+- `backend/` - aktualna logika aplikacji w Pythonie
+- `frontend/` - szkielet pod HTML/CSS/JS (`index.html`, `style.css`, `app.js`)
+
 ## Uruchomienie:
-python main.py
+python backend/main.py
