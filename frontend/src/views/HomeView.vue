@@ -11,6 +11,7 @@
           class="input"
           placeholder="Wpisz swoje imię…"
           autocomplete="off"
+          @input="onInput"
         />
         <button type="submit" class="btn">Start</button>
       </form>
@@ -30,14 +31,25 @@ const name = ref('')
 const error = ref(false)
 const router = useRouter()
 
+function onInput() {
+  if (name.value.trim()) {
+    error.value = false
+  }
+}
+
 function onStart() {
-  if (!name.value.trim()) {
+  const trimmedName = name.value.trim()
+
+  if (!trimmedName) {
     error.value = true
     return
   }
 
   error.value = false
-  router.push('/chat')
+  router.push({
+    path: '/chat',
+    query: { name: trimmedName },
+  })
 }
 </script>
 
