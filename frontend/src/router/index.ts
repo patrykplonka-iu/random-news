@@ -15,6 +15,10 @@ const router = createRouter({
       name: 'chat',
       component: ChatView,
     },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
+    },
   ],
 })
 
