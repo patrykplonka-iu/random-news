@@ -1,23 +1,23 @@
-news_headlines_man = (
-    "jesteś fajny",
-    "dzisiaj będzie wybitna pogoda",
+﻿news_headlines_man = (
+    "jestes fajny",
+    "dzisiaj bedzie wybitna pogoda",
     "nauka jest super",
     "programowanie jest zabawne",
     "kawa jest najlepsza",
-    "jesteś inteligentny",
-    "masz świetne poczucie humoru",
+    "jestes inteligentny",
+    "masz swietne poczucie humoru",
 )
 
 news_headlines_woman = (
-    "jesteś piękna",
-    "dzisiaj będzie ładna pogoda",
-    "nauka może być super",
+    "jestes piekna",
+    "dzisiaj bedzie ladna pogoda",
+    "nauka moze byc super",
     "programowanie nie jest dla Ciebie",
     "kawa z mlekiem jest najlepsza",
-    "jesteś inteligentna",
+    "jestes inteligentna",
     "masz poczucie humoru",
 )
 
-thanks_words = ["dziękuję", "dzięki", "dziekuje", "dzieki"]
+thanks_words = ["dziekuje", "dzieki", "dzięki", "dziękuję"]
 yes_words = ["tak", "ok", "okej", "oki"]
 no_words = ["nie", "nope", "n"]

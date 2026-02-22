@@ -1,9 +1,9 @@
-<template>
+﻿<template>
   <main class="home">
     <section class="wrap">
-      <h1 class="title">Random Interaction</h1>
+      <h1 class="title">Random Interakcja</h1>
       <p class="desc">
-        Prosty eksperyment z rozmową, logiką i stanem aplikacji.
+        Prosta aplikacja do losowej interakcji z innymi uzytkownikami. Wpisz swoje imie i rozpocznij rozmowe.
       </p>
 
       <form class="form" @submit.prevent="onStart">
@@ -11,15 +11,14 @@
           v-model="name"
           type="text"
           class="input"
-          placeholder="Wpisz swoje imię…"
+          placeholder="Wpisz swoje imie..."
           autocomplete="off"
         />
         <button type="submit" class="btn">Start</button>
       </form>
 
-      <p v-if="error" class="error">Podaj imię.</p>
-
-      <p class="version">v0.1 – dev mode</p>
+      <p v-if="error" class="error">Podaj imie.</p>
+      <p class="version">v0.2 - api mode</p>
     </section>
   </main>
 </template>
@@ -33,18 +32,17 @@ const error = ref(false)
 const router = useRouter()
 
 function onStart() {
-  if (!name.value.trim()) {
+  const trimmedName = name.value.trim()
+  if (!trimmedName) {
     error.value = true
     return
   }
 
   error.value = false
-
-  // opcja A: od razu przekierowanie
-  router.push('/chat')
-
-  // opcja B: na teraz tylko log
-  // console.log('Start for:', name.value)
+  router.push({
+    path: '/chat',
+    query: { name: trimmedName },
+  })
 }
 </script>
 
@@ -116,7 +114,7 @@ function onStart() {
 
 .error {
   margin: 0.25rem 0 1rem 0;
-  color: #ef4444;
+  color: #f87171;
   font-size: 0.9rem;
 }
 
